@@ -30,6 +30,7 @@
     ./waybar                          # status bar
     ./xdg-mimes.nix                   # xdg config
     ./zsh.nix                         # shell
-    ./jetbrains.nix
+    ./jetbrains.nix                   # jetbrains-toolbox
+    ./gitkraken.nix 		      # gitkraken
   ];
 }
