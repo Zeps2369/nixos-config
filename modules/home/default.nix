@@ -30,5 +30,6 @@
     ./waybar                          # status bar
     ./xdg-mimes.nix                   # xdg config
     ./zsh.nix                         # shell
+    ./jetbrains.nix
   ];
 }

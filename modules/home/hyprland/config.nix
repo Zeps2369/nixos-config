@@ -24,10 +24,10 @@
       ];
 
       input = {
-        kb_layout = "us,fr";
+        kb_layout = "dk,fr";
         kb_options ="grp:alt_caps_toggle"; 
         numlock_by_default = true;
-        follow_mouse = 0;
+        follow_mouse = 1;
         float_switch_override_focus = 0;
         mouse_refocus = 0;
         sensitivity = 0;
@@ -141,7 +141,7 @@
         "$mainMod, Return, exec, kitty"
         "ALT, Return, exec, kitty --title float_kitty"
         "$mainMod SHIFT, Return, exec, kitty --start-as=fullscreen -o 'font_size=16'"
-        "$mainMod, B, exec, hyprctl dispatch exec '[workspace 1 silent] floorp'"
+        "$mainMod, W, exec, floorp"
         "$mainMod, Q, killactive,"
         "$mainMod, F, fullscreen, 0"
         "$mainMod SHIFT, F, fullscreen, 1"
@@ -160,9 +160,8 @@
         "$mainMod, E, exec, nautilus"
         "$mainMod SHIFT, B, exec, toggle_waybar"
         "$mainMod, C ,exec, hyprpicker -a"
-        "$mainMod, W,exec, wallpaper-picker"
+        "$mainMod SHIFT, W,exec, wallpaper-picker"
         "$mainMod, N, exec, swaync-client -t -sw"
-        "$mainMod SHIFT, W, exec, vm-start"
 
         # screenshot
         "$mainMod, Print, exec, grimblast --notify --cursor --freeze save area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
@@ -287,7 +286,6 @@
         "opacity 1.0 override 1.0 override, class:(Unity)"
         "opacity 1.0 override 1.0 override, class:(floorp)"
         "opacity 1.0 override 1.0 override, class:(evince)"
-        "workspace 1, class:^(floorp)$"
         "workspace 4, class:^(discord)$"
         "workspace 4, class:^(Gimp-2.10)$"
         "workspace 4, class:^(Aseprite)$"
