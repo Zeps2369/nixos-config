@@ -3,8 +3,8 @@ let custom = {
   font = "JetBrainsMono Nerd Font";
   font_size = "18px";
   font_weight = "bold";
-  text_color = "#FBF1C7";
-  background_0 = "#1D2021";
+  text_color = "#CDD6F4";
+  background_0 = "#11111b";
   background_1 = "#282828";
   border_color = "#928374";
   red = "#CC241D";
@@ -14,7 +14,9 @@ let custom = {
   magenta = "#B16286";
   cyant = "#689D6A";
   orange = "#D65D0E";
-  opacity = "1";
+  mauve = "#CBA6F7";
+  Lavender = "#B4BEFE";
+  opacity = "0.98";
   indicator_height = "2px";
 };
 in 
@@ -48,7 +50,7 @@ in
       padding-left: 15px;
     }
     #workspaces button {
-      color: ${yellow};
+      color: ${mauve};
       padding-left:  5px;
       padding-right: 5px;
       margin-right: 10px;
@@ -58,8 +60,8 @@ in
       color: ${text_color};
     }
     #workspaces button.active {
-      color: ${yellow};
-      border-bottom: ${indicator_height} solid ${yellow};
+      color: ${mauve};
+      border-bottom: ${indicator_height} solid ${mauve};
     }
 
     #clock {
@@ -88,31 +90,31 @@ in
     }
 
     #cpu {
-      border-bottom: ${indicator_height} solid ${green};
+      border-bottom: ${indicator_height} solid ${mauve};
     }
     #memory {
-      border-bottom: ${indicator_height} solid ${cyant};
+      border-bottom: ${indicator_height} solid ${mauve};
     }
     #disk {
-      border-bottom: ${indicator_height} solid ${orange};
+      border-bottom: ${indicator_height} solid ${mauve};
     }
 
     #pulseaudio {
       margin-left: 15px;
-      border-bottom: ${indicator_height} solid ${blue};
+      border-bottom: ${indicator_height} solid ${mauve};
     }
     #network {
-      border-bottom: ${indicator_height} solid ${magenta};
+      border-bottom: ${indicator_height} solid ${mauve};
     }
     #battery {
-      border-bottom: ${indicator_height} solid ${yellow};
+      border-bottom: ${indicator_height} solid ${mauve};
     }
 
     #custom-notification {
       margin-left: 15px;
       padding-right: 2px;
       margin-right: 5px;
-      border-bottom: ${indicator_height} solid ${red};
+      border-bottom: ${indicator_height} solid ${mauve};
     }
 
     #custom-launcher {

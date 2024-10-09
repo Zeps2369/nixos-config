@@ -1,6 +1,5 @@
 {inputs, username, host, ...}: {
   imports = [
-    ./aseprite/aseprite.nix           # pixel art editor
     ./audacious.nix                   # music player
     ./bat.nix                         # better cat command
     ./btop.nix                        # resouces monitor 
@@ -32,5 +31,9 @@
     ./zsh.nix                         # shell
     ./jetbrains.nix                   # jetbrains-toolbox
     ./gitkraken.nix 		      # gitkraken
+    ./chrome.nix		      # chromium
+    ./bun.nix			      # bun
+    ./dotenv.nix		      # dotenv
+    ./infisical.nix		      # infisical
   ];
 }

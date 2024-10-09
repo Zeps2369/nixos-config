@@ -4,7 +4,7 @@
   programs.kitty = {
     enable = true;
 
-    themeFile = "gruvbox-dark-hard";
+    themeFile = "Catppuccin-Mocha";
     
     font = {
       name = "CaskaydiaCove Nerd Font";

@@ -33,6 +33,7 @@
         sensitivity = 0;
         touchpad = {
           natural_scroll = true;
+	  scroll_factor = 0.2;
         };
       };
 
@@ -42,7 +43,7 @@
         gaps_in = 0;
         gaps_out = 0;
         border_size = 2;
-        "col.active_border" = "rgb(98971a) rgb(cc241d) 45deg";
+        "col.active_border" = "rgb(cba6f7) rgb(b4befe) 45deg";
         "col.inactive_border" = "0x00000000";
         border_part_of_window = false;
         no_border_on_floating = false;
@@ -78,7 +79,7 @@
 
       decoration = {
         rounding = 0;
-        # active_opacity = 0.90;
+        active_opacity = 0.90;
         # inactive_opacity = 0.90;
         # fullscreen_opacity = 1.0;
 
@@ -148,9 +149,8 @@
         "$mainMod, Space, togglefloating,"
         "$mainMod, Space, centerwindow,"
         "$mainMod, Space, resizeactive, exact 950 600"
-        "$mainMod, D, exec, rofi -show drun || pkill rofi"
+        "$mainMod, D ,exec, rofi -show drun || pkill rofi"
         "$mainMod SHIFT, D, exec, hyprctl dispatch exec '[workspace 4 silent] discord --enable-features=UseOzonePlatform --ozone-platform=wayland'"
-        "$mainMod SHIFT, S, exec, hyprctl dispatch exec '[workspace 5 silent] SoundWireServer'"
         "$mainMod, Escape, exec, swaylock"
         "ALT, Escape, exec, hyprlock"
         "$mainMod SHIFT, Escape, exec, power-menu"
@@ -164,7 +164,7 @@
         "$mainMod, N, exec, swaync-client -t -sw"
 
         # screenshot
-        "$mainMod, Print, exec, grimblast --notify --cursor --freeze save area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
+        "$mainMod SHIFT, S, exec, grimblast --notify --cursor --freeze save area ~/Pictures/$(date +'%Y-%m-%d-At-%Ih%Mm%Ss').png"
         ",Print, exec, grimblast --notify --cursor --freeze copy area"
 
         # switch focus

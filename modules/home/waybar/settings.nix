@@ -14,6 +14,8 @@ let custom = {
   magenta = "#B16286";
   cyant = "#689D6A";
   orange = "#D65D0E";
+  mauve = "#CBA6F7";
+  Lavender = "#B4BEFE";
   opacity = "1";
   indicator_height = "2px";
 };
@@ -79,26 +81,26 @@ in
         };
     };
     cpu= {
-        format= "<span foreground='${green}'> </span> {usage}%";
-        format-alt= "<span foreground='${green}'> </span> {avg_frequency} GHz";
+        format= "<span foreground='${mauve}'> </span> {usage}%";
+        format-alt= "<span foreground='${mauve}'> </span> {avg_frequency} GHz";
         interval= 2;
     };
     memory= {
-        format= "<span foreground='${cyant}'>󰟜 </span>{}%";
-        format-alt= "<span foreground='${cyant}'>󰟜 </span>{used} GiB"; # 
+        format= "<span foreground='${mauve}'>󰟜 </span>{}%";
+        format-alt= "<span foreground='${mauve}'>󰟜 </span>{used} GiB"; # 
         interval= 2;
     };
     disk = {
         # path = "/";
-        format = "<span foreground='${orange}'>󰋊 </span>{percentage_used}%";
+        format = "<span foreground='${mauve}'>󰋊 </span>{percentage_used}%";
         interval= 60;
     };
     network = {
-        format-wifi = "<span foreground='${magenta}'> </span> {signalStrength}%";
-        format-ethernet = "<span foreground='${magenta}'>󰀂 </span>";
+        format-wifi = "<span foreground='${mauve}'> </span> {signalStrength}%";
+        format-ethernet = "<span foreground='${mauve}'>󰀂 </span>";
         tooltip-format = "Connected to {essid} {ifname} via {gwaddr}";
         format-linked = "{ifname} (No IP)";
-        format-disconnected = "<span foreground='${magenta}'>󰖪 </span>";
+        format-disconnected = "<span foreground='${mauve}'>󰖪 </span>";
     };
     tray= {
         icon-size= 20;
@@ -106,19 +108,19 @@ in
     };
     pulseaudio= {
         format= "{icon} {volume}%";
-        format-muted= "<span foreground='${blue}'> </span> {volume}%";
+        format-muted= "<span foreground='${mauve}'> </span> {volume}%";
         format-icons= {
-            default= ["<span foreground='${blue}'> </span>"];
+            default= ["<span foreground='${mauve}'> </span>"];
         };
         scroll-step= 5;
         on-click= "pamixer -t";
     };
     battery = {
-        format = "<span foreground='${yellow}'>{icon}</span> {capacity}%";
+        format = "<span foreground='${mauve}'>{icon}</span> {capacity}%";
         format-icons = [" " " " " " " " " "];
-        format-charging = "<span foreground='${yellow}'> </span>{capacity}%";
-        format-full = "<span foreground='${yellow}'> </span>{capacity}%";
-        format-warning = "<span foreground='${yellow}'> </span>{capacity}%";
+        format-charging = "<span foreground='${mauve}'> </span>{capacity}%";
+        format-full = "<span foreground='${mauve}'> </span>{capacity}%";
+        format-warning = "<span foreground='${mauve}'> </span>{capacity}%";
         interval = 5;
         states = {
             warning = 20;

@@ -1,22 +1,4 @@
 { pkgs, ... }: 
-let 
-  jonathanharty.gruvbox-material-icon-theme = pkgs.vscode-utils.buildVscodeMarketplaceExtension {
-    mktplcRef = {
-      name = "gruvbox-material-icon-theme";
-      publisher = "JonathanHarty";
-      version = "1.1.5";
-      hash = "sha256-86UWUuWKT6adx4hw4OJw3cSZxWZKLH4uLTO+Ssg75gY=";
-    };
-  };
-  # sainnhe.gruvbox-material = pkgs.vscode-utils.buildVscodeMarketplaceExtension {
-  #   mktplcRef = {
-  #     name = "gruvbox-material";
-  #     publisher = "sainnhe";
-  #     version = "6.5.2";
-  #     hash = "sha256-D+SZEQQwjZeuyENOYBJGn8tqS3cJiWbEkmEqhNRY/i4=";
-  #   };
-  # };
-in
 {
   programs.vscode = {
     enable = true;
@@ -32,11 +14,9 @@ in
       ms-vscode.cpptools
       # OCaml
       ocamllabs.ocaml-platform
-
-      # Color theme
-      jdinhlife.gruvbox
-      # sainnhe.gruvbox-material
-      jonathanharty.gruvbox-material-icon-theme
+      # Catpuccin theme
+      catppuccin.catppuccin-vsc
+      catppuccin.catppuccin-vsc-icons
     ];
     userSettings = {
       "update.mode" = "none";
@@ -47,8 +27,8 @@ in
       "editor.fontFamily" = "'CaskaydiaCove Nerd Font', 'SymbolsNerdFont', 'monospace', monospace";
       "terminal.integrated.fontFamily" = "'CaskaydiaCove Nerd Font', 'SymbolsNerdFont'";
       "editor.fontSize" = 18;
-      "workbench.colorTheme" = "Gruvbox Dark Hard";
-      "workbench.iconTheme" = "gruvbox-material-icon-theme";
+      "workbench.colorTheme" = "Catppuccin Mocha";
+      "workbench.iconTheme" = "catppuccin-mocha";
       "material-icon-theme.folders.theme" = "classic";
       "vsicons.dontShowNewVersionMessage" = true;
       "explorer.confirmDragAndDrop" = false;
